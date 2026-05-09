@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Diagnostic Center</title>
+    
+    <link rel="stylesheet" href="ecc-core.css">
+    <link rel="stylesheet" href="ecc-web-gui.css">
+    <link rel="icon" href="favicon.ico">
+    
+    <link rel="stylesheet" href="final_project.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="dash-header">
+            <h2>Advanced Motor Diagnostic Center</h2>
+            <div id="connStatus" class="status-badge disconnected">Disconnected</div>
+        </header>
+
+        <div class="dash-grid">
+            <div class="dash-panel controls">
+                <h3>System Controls</h3>
+                
+                <div class="control-group">
+                    <div class="label">Main Motor (LED 0)</div>
+                    <div id="motorIndicator" class="indicator"></div>
+                    <button id="btnMotor" class="btn-primary" disabled>START MOTOR</button>
+                </div>
+
+                <div class="control-group">
+                    <div class="label">Cooling Fan (LED 1)</div>
+                    <div id="fanIndicator" class="indicator"></div>
+                    <button id="btnFan" class="btn-secondary" disabled>START FAN</button>
+                </div>
+            </div>
+
+            <div class="dash-panel telemetry">
+                <h3>Live Telemetry</h3>
+                
+                <div class="telemetry-grid">
+                    <div class="sensor-card">
+                        <span class="sensor-title">Temperature</span>
+                        <div class="sensor-value"><span id="valTemp">--</span> °C</div>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="sensor-title">Voltage</span>
+                        <div class="sensor-value"><span id="valVolt">--</span> V</div>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="sensor-title">Current</span>
+                        <div class="sensor-value"><span id="valCurr">--</span> A</div>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="sensor-title">Vibration</span>
+                        <div class="sensor-value"><span id="valVib">--</span> Hz</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-panel hardware">
+                <h3>Physical Switch Status</h3>
+                <div class="switch-row">
+                    <div class="switch-box"><div id="psw0" class="hw-indicator"></div>PSW 0</div>
+                    <div class="switch-box"><div id="psw1" class="hw-indicator"></div>PSW 1</div>
+                    <div class="switch-box"><div id="psw2" class="hw-indicator"></div>PSW 2</div>
+                    <div class="switch-box"><div id="psw3" class="hw-indicator"></div>PSW 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ecc-core.js"></script>
+    <script src="ecc-web-gui.js"></script>
+    
+    <script src="final_projectt.js"></script>
+</body>
+</html>
