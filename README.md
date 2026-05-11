@@ -61,10 +61,10 @@ A comprehensive, browser-based Human-Machine Interface (HMI) designed to monitor
 
 ## File Structure
 
-project-folder/
- ├── index.html      — main HTML layout using CSS grid
- ├── style.css       — custom interface styling and visual feedback
- ├── main.js         — WebSocket logic, data parsing, and scaling functions
+main/
+ ├── final_project.html      — main HTML layout using CSS grid
+ ├── final_project.css       — custom interface styling and visual feedback
+ ├── final_projectt.js         — WebSocket logic, data parsing, and scaling functions
  └── README.md       — project documentation
 
 ***
