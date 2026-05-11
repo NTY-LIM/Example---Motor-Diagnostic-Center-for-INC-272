@@ -1,4 +1,4 @@
-readme_content = """# Advanced Motor Diagnostic Center
+"""# Advanced Motor Diagnostic Center
 
 * * *
 
