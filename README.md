@@ -6,10 +6,10 @@ readme_content = """# Advanced Motor Diagnostic Center
 
 | | |
 |---|---|
-| Group name | [Insert Group Name] |
-| Member 1 | [Insert Name] — [Insert Student ID] |
-| Member 2 | [Insert Name] — [Insert Student ID] |
-| Member 3 | [Insert Name] — [Insert Student ID] |
+| Group name | TNT |
+| Member 1 | Nattakorn Limpanarom — 67070504005 |
+| Member 2 | Bhavornnan Kengkarnchang — 67070504006 |
+| Member 3 | Pongsapak Nonkhum — 67070504024 |
 | Course | INC272: Web-Based IoT Applications (2026) |
 
 * * *
