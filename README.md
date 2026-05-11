@@ -1,31 +1,58 @@
-# Advanced Motor Diagnostic Center
+readme_content = """# Advanced Motor Diagnostic Center
+
+* * *
+
+## Group Information
+
+| | |
+|---|---|
+| Group name | [Insert Group Name] |
+| Member 1 | [Insert Name] — [Insert Student ID] |
+| Member 2 | [Insert Name] — [Insert Student ID] |
+| Member 3 | [Insert Name] — [Insert Student ID] |
+| Course | INC272: Web-Based IoT Applications (2026) |
+
+* * *
 
 ## Project Goal
-A comprehensive, browser-based Human-Machine Interface (HMI) designed to monitor the health of an industrial synchronous motor and provide remote operational control.
 
-## Project Scope
-This project implements an advanced diagnostic dashboard. It connects to the course's Node.js mock hardware server via WebSockets, demonstrating a full control loop utilizing both discrete (switch/LED) and analog (ADC) signals across multiple channels simultaneously.
+A comprehensive, browser-based Human-Machine Interface (HMI) designed to monitor the health of an industrial synchronous motor and provide remote operational control over its motor and cooling systems.
 
-## Features Included
-- **Control Elements:** Toggle buttons for the Main Motor (`led,0`) and Cooling Fan (`led,1`), providing visual state feedback.
-- **Monitoring Elements (Telemetry):** Continuous polling of four ADC channels scaled into realistic engineering units:
-  - ADC 0: Operating Temperature
-  - ADC 1: System Voltage
-  - ADC 2: Current Draw
-  - ADC 3: Motor Vibration
-- **Hardware Status:** Real-time physical switch monitoring, displaying the depressed/released state of PSW channels 0 through 3.
-- **Library Integration:** Utilizes the provided `ecc-core` and `ecc-web-gui` libraries for underlying structure.
+* * *
 
-## File Structure
-- `index.html`: The structural layout of the dashboard, utilizing CSS Grid.
-- `style.css`: Custom styling for the diagnostic center, ensuring a responsive and professional industrial interface.
-- `main.js`: Contains the WebSocket lifecycle logic, multi-channel data parsing, scaling functions, and DOM manipulation.
-- `ecc-core.css`, `ecc-core.js`, `ecc-web-gui.css`, `ecc-web-gui.js`, `favicon.ico`: Course-provided system libraries.
-- `README.md`: Project documentation and scope definition.
+## Simulator Features Used
 
-## Setup and Usage
-1. Open a terminal and start the mock hardware server (`npm install` then `npm start`). Ensure it is running on `ws://127.0.0.1:3000/ecclab`.
-2. Open `index.html` in a modern web browser.
-3. Verify the Connection Status badge reads "System Online" in green.
-4. Interact with the "START MOTOR" and "START FAN" buttons to test the control loop.
-5. Observe the live telemetry values and hardware switch indicators updating dynamically based on the server's automated broadcasts.
+- [x] LED — 4 channels, toggle on/off
+- [x] PSW — 4 push switches, read state
+- [x] ADC — 4 analog channels, read sensor values
+- [ ] PWM — 4 channels, control duty ratio
+
+* * *
+
+## Interface Features
+
+### Monitoring Elements
+
+| Element | What It Shows | Simulator Feature |
+|---------|--------------|-------------------|
+| Temperature Display | Scaled reading of system temperature (20-90°C) | ADC ch.0 |
+| Voltage Display | Scaled reading of system voltage (220-240V) | ADC ch.1 |
+| Current Display | Scaled reading of current draw (0-15A) | ADC ch.2 |
+| Vibration Display | Scaled reading of motor vibration (0-60Hz) | ADC ch.3 |
+| Hardware Switch Indicators | Live hardware switch press states | PSW ch.0, 1, 2, 3 |
+
+### Control Elements
+
+| Element | What It Does | Command Sent |
+|---------|-------------|--------------|
+| Motor Toggle Button | Turns the Main Motor (LED 0) on or off | `led,0,2` |
+| Fan Toggle Button | Turns the Cooling Fan (LED 1) on or off | `led,1,2` |
+
+* * *
+
+## How to Run
+
+1. Start the mock hardware server:
+2. Open index.html using a modern browser or VS Code Live Server.
+3. Check the browser console — a WebSocket connection message should appear.
+4. Check the server terminal — [CONNECT] should be printed, and telemetry will start broadcasting.
