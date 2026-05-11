@@ -73,4 +73,4 @@ None. The system perfectly maintains a real-time connection and seamlessly route
 
 *** Screenshots
 
-![description](C:\Users\KuHuwKaw\Desktop\University\INC\INC272\INC272-2026-main\Week06\final_project)
+![description](HMI_final_project.png)
