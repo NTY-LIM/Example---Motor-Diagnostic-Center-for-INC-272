@@ -67,10 +67,10 @@ project-folder/
 ├── main.js         — WebSocket logic, data parsing, and scaling functions
 └── README.md       — project documentation
 
-*** Known Limitations
+## Known Limitations
 
 None. The system perfectly maintains a real-time connection and seamlessly routes multi-channel telemetry and control signals.
 
-*** Screenshots
+## Screenshots
 
 ![description](HMI_final_project.png)
