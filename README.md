@@ -56,3 +56,21 @@ A comprehensive, browser-based Human-Machine Interface (HMI) designed to monitor
 2. Open index.html using a modern browser or VS Code Live Server.
 3. Check the browser console — a WebSocket connection message should appear.
 4. Check the server terminal — [CONNECT] should be printed, and telemetry will start broadcasting.
+
+***
+
+## File Structure
+
+project-folder/
+├── index.html      — main HTML layout using CSS grid
+├── style.css       — custom interface styling and visual feedback
+├── main.js         — WebSocket logic, data parsing, and scaling functions
+└── README.md       — project documentation
+
+*** Known Limitations
+
+None. The system perfectly maintains a real-time connection and seamlessly routes multi-channel telemetry and control signals.
+
+*** Screenshots
+
+![description](C:\Users\KuHuwKaw\Desktop\University\INC\INC272\INC272-2026-main\Week06\final_project)
