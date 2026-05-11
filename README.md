@@ -53,9 +53,13 @@ A comprehensive, browser-based Human-Machine Interface (HMI) designed to monitor
 ## How to Run
 
 1. Start the mock hardware server:
-2. Open index.html using a modern browser or VS Code Live Server.
-3. Check the browser console — a WebSocket connection message should appear.
-4. Check the server terminal — [CONNECT] should be printed, and telemetry will start broadcasting.
+    ```bash
+   cd simulator/mock-hardware-server
+   npm install
+   npm start
+3. Open index.html using a modern browser or VS Code Live Server.
+4. Check the browser console — a WebSocket connection message should appear.
+5. Check the server terminal — [CONNECT] should be printed, and telemetry will start broadcasting.
 
 ***
 
